@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingredientes Adicionales</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #e8fdf5 0%, #b7f7d8 100%);
+      margin: 0;
+      min-height: 100vh;
+    }
+    .main-container {
+      max-width: 600px;
+      margin: 40px auto 0 auto;
+      background: #f4fdf8;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px #28a74533;
+      padding: 32px 28px 28px 28px;
+      position: relative;
+    }
+    h1 {
+      text-align: center;
+      color: #219150;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+      font-size: 2em;
+      text-shadow: 0 2px 8px #b7f7d8;
+    }
+    fieldset {
+      border: none;
+      background: #eafaf1;
+      border-radius: 12px;
+      padding: 18px 20px 10px 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px #28a74522;
+    }
+    legend {
+      font-weight: bold;
+      color: #219150;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #f4fdf8;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 18px;
+    }
+    th, td {
+      border: 1px solid #28a74555;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #28a745;
+      color: #fff;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #eafaf1;
+    }
+    tr:nth-child(odd) {
+      background-color: #f4fdf8;
+    }
+    input[type="checkbox"] {
+      transform: scale(1.2);
+      margin-right: 8px;
+      accent-color: #28a745;
+    }
+    #caloriasBI {
+      margin-top: 15px;
+      font-size: 1.1em;
+      font-weight: bold;
+      width: 120px;
+      text-align: center;
+      border-radius: 8px;
+      border: 1.5px solid #28a745;
+      background: #eafaf1;
+      color: #219150;
+      padding: 6px;
+      margin-bottom: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .botones {
+      margin-top: 18px;
+      text-align: center;
+    }
+    button {
+      background: linear-gradient(90deg, #28a745 60%, #eafaf1 100%);
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 22px;
+      margin: 8px 8px 0 8px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 8px #28a74533;
+      transition: background 0.2s, color 0.2s, transform 0.1s;
+      display: inline-block;
+      min-width: 180px;
+      text-align: center;
+    }
+    button:hover {
+      background: #219150;
+      color: #eafaf1;
+      transform: scale(1.05);
+    }
+    @media (max-width: 700px) {
+      .main-container { padding: 10px 2vw; }
+      table, th, td { font-size: 0.95em; }
+      button { min-width: 120px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <h1>Ingredientes adicionales</h1>
+    <fieldset>
+      <legend>Selecciona los ingredientes</legend>
+      <table>
+        <thead>
+          <tr>
+            <th>Seleccionar</th>
+            <th>Ingrediente</th>
+            <th>Calorías</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><input type="checkbox" value="120"></td><td>Queso</td><td>120 kcal</td></tr>
+          <tr><td><input type="checkbox" value="90"></td><td>Crema</td><td>90 kcal</td></tr>
+          <tr><td><input type="checkbox" value="80"></td><td>Salsa</td><td>80 kcal</td></tr>
+          <tr><td><input type="checkbox" value="100"></td><td>Frijoles</td><td>100 kcal</td></tr>
+          <tr><td><input type="checkbox" value="110"></td><td>Arroz</td><td>110 kcal</td></tr>
+          <tr><td><input type="checkbox" value="70"></td><td>Lechuga</td><td>70 kcal</td></tr>
+          <tr><td><input type="checkbox" value="60"></td><td>Tomate</td><td>60 kcal</td></tr>
+          <tr><td><input type="checkbox" value="150"></td><td>Carne molida</td><td>150 kcal</td></tr>
+          <tr><td><input type="checkbox" value="130"></td><td>Pollo</td><td>130 kcal</td></tr>
+          <tr><td><input type="checkbox" value="90"></td><td>Chorizo</td><td>90 kcal</td></tr>
+          <tr><td><input type="checkbox" value="50"></td><td>Cebolla</td><td>50 kcal</td></tr>
+          <tr><td><input type="checkbox" value="40"></td><td>Guacamole</td><td>40 kcal</td></tr>
+          <tr><td><input type="checkbox" value="30"></td><td>Limón</td><td>30 kcal</td></tr>
+          <tr><td><input type="checkbox" value="60"></td><td>Tocino</td><td>60 kcal</td></tr>
+          <tr><td><input type="checkbox" value="75"></td><td>Champiñones</td><td>75 kcal</td></tr>
+        </tbody>
+      </table>
+    </fieldset>
+    <input type="number" id="caloriasBI" value="0" readonly>
+    <div class="botones">
+      <button type="button" onclick="enviarCalorias()">Enviar Calorías</button>
+      <button type="button" onclick="limpiarSeleccion()">Limpiar Selección</button>
+    </div>
+  </div>
+  <script>
+    function actualizarCalorias() {
+      let total = 0;
+      document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        if (cb.checked) total += parseInt(cb.value) || 0;
+      });
+      document.getElementById('caloriasBI').value = total;
+    }
+
+    document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('change', actualizarCalorias);
+    });
+
+    function enviarCalorias() {
+      const valor = parseInt(document.getElementById('caloriasBI').value) || 0;
+      window.parent.postMessage({ tipo: 'BI', valor: valor }, '*');
+    }
+
+    function limpiarSeleccion() {
+      document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        cb.checked = false;
+      });
+      actualizarCalorias();
+    }
+  </script>
+</body>
+</html>
